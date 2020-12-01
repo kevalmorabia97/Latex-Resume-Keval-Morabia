@@ -1,5 +1,5 @@
 % Intro Options
-\ProvidesClass{Keval-resume}[Resume class]
+\ProvidesClass{Resume}[Resume class]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -34,9 +34,9 @@
 
 % Section seperators 
 \usepackage{titlesec}
-\titlespacing{\section}{0pt}{0pt}{-9pt}
+\titlespacing{\section}{0pt}{0pt}{-8pt}
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
-\newcommand{\sectionsep}{\vspace{7.5pt}}
+\newcommand{\sectionsep}{\vspace{8pt}}
 \newcommand{\postsectionsep}{\vspace{0pt}}
 
 % Headings command
@@ -53,6 +53,10 @@
 	\textit{\textbf{#1}} \normalfont \hfill #2 \\
 }
 
-% Descriptors command
+% Other command
 \newcommand{\descript}[1]{
-\raggedright\scshape\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{10pt}{11.5pt}\selectfont {} \normalfont}
+    \raggedright\scshape\fontspec[Path = fonts/lato/]{Lato-Bol}
+    \fontsize{10pt}{12pt}\selectfont {} \normalfont
+}
+
+\newcommand{\pt}{\textbullet{} }
